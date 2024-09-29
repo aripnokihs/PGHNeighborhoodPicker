@@ -24,13 +24,14 @@ function Frontpage() {
     <div>
       <div className="bg-image"></div>
       <header className="App-header">
-        {typeof data.members === 'undefined' ? (
+        <p style={{ color: '', fontSize: '50px' }}>LocaleLens</p>
+        {/* {typeof data.members === 'undefined' ? (
           <p style={{ color: '', fontSize: '50px' }}>LocaleLens</p>
         ) : (
           data.members.map((member, i) => (
             <p key={i}>{member}</p>
           ))
-        )}
+        )} */}
       </header>
 
       <br/>
