@@ -2,8 +2,11 @@
 ### Status:
 Unfinished
 ### About:
+
 This is a project for SteelHacks XI.
+
 This project is a React + Flask project utilizing machine learning to provide a best-fitting neighborhood in Pittsburgh based on user inputs.
+
 ### Group Members:
 
 ### Tools & Code used:
