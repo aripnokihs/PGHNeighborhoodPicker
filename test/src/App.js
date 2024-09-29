@@ -30,14 +30,21 @@ function App() {
         )}
         <a
             className="App-link"
-            href="https://reactjs.org"
+            href="https://github.com/aripnokihs/PGHNeighborhoodPicker"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            Repo Link
           </a>
-      
+          <form action = "/next">
+            <label for = "fname">Monthly Salary: </label>
+            <input type="text" id="fname" name="fname"></input><br></br>
+            <label for = "fname">Working Neighborhood: </label>
+            <input type="text" id="lname" name="lname"></input><br></br>
+            <input type="submit" value="Submit"></input>
+          </form>
       </header>
+
 
     </div>
   )
