@@ -13,7 +13,7 @@ def submit_data():
 
     print(f"Received Input 1: {input1}, Input 2: {input2}")
 
-    return jsonify({'message': 'Data received successfully'})
+    return jsonify({'input1': input1, 'input2': input2})
 
 if __name__ == '__main__':
     app.run(debug=True)
