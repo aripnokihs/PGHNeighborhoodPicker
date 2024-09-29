@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
+/* Sleek Modern Palette */
+
+/* Primary */
+.primary-color {
+  color: #4a90e2;  /* Cool Blue */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.primary-dark {
+  color: #2c6aa7;   /* Darker Cool Blue */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.primary-light {
+  color: #a6c9f0;  /* Lighter Cool Blue */
 }
 
-.App-header {
-  background-color: #E3E3E3;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: rgb(4, 3, 3);
+/* Secondary */
+.secondary-color {
+  color: #f5a623;  /* Warm Amber */
 }
 
-.App-link {
-  color: #61dafb;
+.secondary-dark {
+  color: #c17f19;   /* Darker Amber */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.secondary-light {
+  color: #fcd39f;  /* Lighter Amber */
+}
+
+/* Accent */
+.accent-color {
+  color: #7ed321;  /* Fresh Green */
+}
+
+.accent-dark {
+  color: #57a119;   /* Darker Fresh Green */
+}
+
+.accent-light {
+  color: #b7eb81;  /* Lighter Fresh Green */
+}
+
+/* Neutral */
+.background-color {
+  background-color: #f4f7f6;  /* Light Grayish Background */
+}
+
+.text-color {
+  color: #333333;  /* Dark Charcoal */
+}
+
+.muted-text-color {
+  color: #888888;  /* Muted Text for Subtlety */
+}
+
+.border-color {
+  border-color: #d8d8d8;  /* Soft Border Gray */
+}
+
+/* Additional */
+.danger-color {
+  color: #e94f37;  /* Strong Red for Alerts */
+}
+
+.success-color {
+  color: #50c878;  /* Emerald for Success Messages */
+}
+
+/* Example usage */
+body {
+  background-color: #f4f7f6; /* Light Grayish Background */
+  color: #ffffff;            /* Dark Charcoal */
+}
+
+a {
+  color: #4a90e2;  /* Primary Color */
+}
+
+button {
+  background-color: #f5a623;  /* Secondary Color */
+  color: white;
+}
+
+button:hover {
+  background-color: #c17f19;  /* Secondary Dark */
 }

@@ -1,0 +1,109 @@
+html, body{
+  height: 100%;
+  margin: 0;
+}
+
+body {
+    background-color: #ffffff; /* Soft cream */
+
+    background-image: url('../../../birdseye.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: 'Lato', sans-serif;
+    color: #ffffff; /* Dark text for contrast */
+    margin: 0;
+    padding: 0;
+}
+
+.bg-image{
+  filter: blur(16px);
+  -webkit-filter: blur(16px);
+  height: 100%;
+}
+
+header {
+  box-sizing: border-box;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.4);
+  border: 0.5px solid #f1f1f1;
+  color: #ffffff;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  padding: 2px;
+  text-align: center;
+  font-size: 1em;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  background-color: #a29bfe; /* Soft purple */
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #81ecec; /* Light teal on hover */
+}
+
+a {
+  color: #74b9ff; /* Soft blue */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff7675; /* Soft coral on hover */
+  text-decoration: underline;
+}
+
+section {
+  background-color: #ffeaa7; /* Pastel yellow */
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  background-color: #fab1a0; /* Pastel peach */
+  color: #2d3436;
+  text-align: center;
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;  /* Stack items vertically */
+  align-items: center;      /* Center items horizontally */
+  gap: 20px;                /* Space between elements */
+}
+
+.row {
+  display: flex;            /* Align label and textbox horizontally */
+  flex-direction: column;   /* Stack label and textbox vertically */
+  align-items: center;      /* Center label and textbox horizontally */
+}
+
+.textbox {
+  padding: 10px;
+  width: 200px;             /* Fixed width for text boxes */
+  border: 1px solid #ccc;   /* Example border */
+  border-radius: 5px;       /* Rounded corners */
+}
+
+.button {
+  color: white;
+  padding: 10px 20px;        /* Padding for button */
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
