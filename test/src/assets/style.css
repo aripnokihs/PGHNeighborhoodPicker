@@ -16,7 +16,7 @@ body {
     padding: 0;
 }
 
-.bg-image{
+.bg1{
   filter: blur(16px);
   -webkit-filter: blur(16px);
   height: 100%;

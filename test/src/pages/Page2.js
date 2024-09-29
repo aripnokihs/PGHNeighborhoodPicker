@@ -5,8 +5,10 @@ import '../assets/style.css';
 function Page2 (){
   return (
     <div>
-      <h1>This is the New Path Page</h1>
-      <p>Welcome to the new path!</p>
+      <div className="bg-image"></div>
+      <div>
+        <h1>Heatmap</h1>
+      </div>
     </div>
   );
 }

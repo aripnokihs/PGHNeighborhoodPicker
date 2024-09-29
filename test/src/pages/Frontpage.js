@@ -1,51 +1,68 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../assets/style.css';
 
 function Frontpage() {
-  const [data, setData] = useState([{}]);
   const navigate = useNavigate();
+  const [input1, setInput1] = useState(0);
+  const [input2, setInput2] = useState('');
+  const [error, setError] = useState('');
 
-  useEffect(() => {
-    fetch("/members")
-      .then(res => res.json())
-      .then(data => {
-        setData(data);
-        console.log(data);
-      });
-  }, []);
+  const handleSubmit = async (e) => {
+    if(!input1 || !input2){
+      setError('No field must be empty.');
+    }
 
-  const handleRedirect = (e) => {
+    setError('');
+
     e.preventDefault();
-    navigate('/page2'); // Navigate to new path on submit
-  };
+    console.log("Input 1:", input1);
+    console.log("Input 2:", input2);
+  
+
+    const data = { input1, input2 };
+
+    try{
+      const response = await fetch('http://localhost:5000/submit-data', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if(response.ok){
+        console.log('Data successfully sent to Flask');
+        navigate('/page2');
+      } else{
+        console.log('Failed to send');
+      }
+    } catch (error){
+      console.error('Error:', error);
+    }
+  }
 
   return (
     <div>
-      <div className="bg-image"></div>
+      <div className="bg1"></div>
       <header className="App-header">
-        {typeof data.members === 'undefined' ? (
           <p style={{ color: '', fontSize: '50px' }}>LocaleLens</p>
-        ) : (
-          data.members.map((member, i) => (
-            <p key={i}>{member}</p>
-          ))
-        )}
       </header>
 
       <br/>
 
-      <form className="new-item-form" onSubmit={handleRedirect}>
+      <form className="new-item-form" onSubmit={handleSubmit}>
   <div className="container">
     <div className="row">
-      <label htmlFor="salary">Salary</label>
-      <input type="text" id="salary" className="textbox" />
+      <label htmlFor="salary">Salary ($)</label>
+      <input type="text" id="input1" value={input1} onChange={(e) => setInput1(e.target.value)} className="textbox" />
     </div>
     <div className="row">
-      <label htmlFor="job_loc">Job Location</label>
-      <input type="text" id="job_loc" className="textbox" />
+      <label htmlFor="job_loc">Neighborhood (Address)</label>
+      <input type="text" id="input2" value = {input2} onChange={(e) => setInput2(e.target.value)} className="textbox" />
     </div>
     <div className="row">
+      {error && <p style={{ color: 'red' }}>{error}</p>} {/* Display error message */}
       <button type="submit" className="button">Submit</button>
     </div>
   </div>
