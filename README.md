@@ -9,6 +9,11 @@ This project is a React + Flask project utilizing machine learning to provide a 
 
 ### Group Members:
 
+Ilay Dvir
+Siddharth Mangipudi
+Siddharth Mangipudi
+Brandon Yang
+
 ### Tools & Code used:
 React App, Flask, JavaScript, html, css, pandas, mysql
 ### Getting Started:
